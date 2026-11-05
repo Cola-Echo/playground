@@ -1,0 +1,27 @@
+﻿Playground 可分享包（干净版）
+============================
+
+这份不含任何 Google 登录凭证（auth）。
+你自己的带号版本在：E:\AIStudioPlayground\dist\Playground-Win64\ （请勿外传）
+
+一、电脑怎么用
+1. 如需代理，编辑 app\.env 里的 HTTP_PROXY / HTTPS_PROXY
+2. 双击 Add-Account.bat，在弹出的浏览器里登录你的 Google 账号
+3. 双击 Playground.bat 启动
+4. 浏览器打开 http://127.0.0.1:8020
+5. 面板/API 密钥默认：pg123456（可在 app\.env 的 API_KEYS 修改）
+6. 用完双击 Playground-Stop.bat
+
+二、客户端填写
+- API URL: http://127.0.0.1:8020/v1
+- API Key: pg123456
+- Model: 例如 gemini-flash-latest
+
+三、注意
+- 不要和本机 Docker 版 8020 同时开（会抢端口）
+- 首次启动后浏览器会话还要加载十几秒
+- 体积大是因为内置了 Node 和 Camoufox 浏览器
+
+四、手机 Termux
+见同目录上一级的 playground-src-share.tgz 与 packaging\termux\README.md
+（源码包同样不含 auth）

@@ -1,0 +1,81 @@
+/**
+ * File: global.less
+ * Description: Global styles that apply to all pages
+ *
+ * Author: iBenzene, bbbugg
+ */
+
+@import "variables.less";
+
+// Reset and base styles
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+    align-items: center;
+    background: @background-light;
+    color: @text-primary;
+    font-family: @font-family-sans;
+    height: 100%;
+    margin: 0;
+    overflow: visible;
+}
+
+html,
+body {
+    -webkit-font-smoothing: antialiased;
+    background:
+        radial-gradient(1200px 520px at 100% -10%, rgba(var(--color-primary-rgb), 0.08), transparent 60%),
+        radial-gradient(900px 420px at -10% 0%, rgba(226, 160, 63, 0.06), transparent 55%),
+        @background-light;
+    background-attachment: fixed;
+}
+
+// Element Plus follows the Playground teal instead of its default blue
+:root {
+    --el-color-primary: #0f9f8f;
+    --el-color-primary-light-3: #57bcb1;
+    --el-color-primary-light-5: #87cfc7;
+    --el-color-primary-light-7: #b7e2dd;
+    --el-color-primary-light-8: #cfece8;
+    --el-color-primary-light-9: #e7f5f4;
+    --el-color-primary-dark-2: #0c7f72;
+    --el-border-radius-base: 10px;
+    --el-border-radius-small: 8px;
+    --el-font-family: @font-family-sans;
+}
+
+html.dark {
+    --el-color-primary: #2cc5b2;
+    --el-color-primary-light-3: #229385;
+    --el-color-primary-light-5: #1a7067;
+    --el-color-primary-light-7: #134d47;
+    --el-color-primary-light-8: #103b37;
+    --el-color-primary-light-9: #0d2a27;
+    --el-color-primary-dark-2: #5ad6c7;
+    --el-bg-color: #18211f;
+    --el-bg-color-overlay: #1d2826;
+    --el-fill-color-blank: #18211f;
+}
+
+// Vue cloak directive
+[v-cloak] {
+    display: none;
+}
+
+// Root app container
+#app {
+    display: contents;
+}
+
+// Smooth scrolling、
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}

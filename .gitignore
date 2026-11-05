@@ -1,0 +1,16 @@
+# 体积大、不进仓库（README 里写了怎么补齐）
+/node/
+/camoufox/
+/app/camoufox
+/app/node_modules/
+
+# 运行时产物 / 账号凭据（绝不能提交）
+/auth/*
+!/auth/.keep
+/app/auth/
+/app/configs/auth/*
+!/app/configs/auth/.keep
+/app/data/
+*.pid
+*.log
+auth-*.json
